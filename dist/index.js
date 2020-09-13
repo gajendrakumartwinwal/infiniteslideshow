@@ -1,5 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const SlideShow_1 = require("./SlideShow");
-exports.default = SlideShow_1.default;
-//# sourceMappingURL=index.js.map
+var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _SlideShow=_interopRequireDefault(require("./SlideShow"));var _default=_SlideShow.default;exports.default=_default;

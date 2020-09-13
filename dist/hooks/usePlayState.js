@@ -1,12 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = require("react");
-function usePlayState(autoScroll) {
-    const [isPlaying, setIsPlaying] = react_1.useState(autoScroll);
-    const setIsPlayingWrapper = (isplaying) => {
-        autoScroll && setIsPlaying(isplaying);
-    };
-    return [isPlaying, setIsPlayingWrapper];
-}
-exports.default = usePlayState;
-//# sourceMappingURL=usePlayState.js.map
+var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.default=usePlayState;var _slicedToArray2=_interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));var _react=require("react");function usePlayState(autoScroll){var _useState=(0,_react.useState)(autoScroll),_useState2=(0,_slicedToArray2.default)(_useState,2),isPlaying=_useState2[0],setIsPlaying=_useState2[1];var setIsPlayingWrapper=function setIsPlayingWrapper(isplaying){autoScroll&&setIsPlaying(isplaying);};return[isPlaying,setIsPlayingWrapper];}
