@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useEffect, useRef, useState} from 'react';
-import {Animated, Dimensions, FlexAlignType, StyleSheet, View} from 'react-native';
+import {Animated, Dimensions, FlexAlignType, View} from 'react-native';
 import {RecyclerListView,} from 'recyclerlistview';
 import CustomBaseScrollView from './CustomBaseScrollView';
 import DefaultViewPageIndicator from './DefaultViewPageIndicator';

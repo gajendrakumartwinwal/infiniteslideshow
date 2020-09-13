@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
-// import SlideShow from "./src/SlideShow";
-import SlideShow from "./dist/index";
+import SlideShow from "./src/SlideShow";
+// import SlideShow from "./dist/index";
 // import SlideShow from "react-native-slide-show-library";
 
 class App extends React.Component{
