@@ -27,7 +27,7 @@ interface SlidShowProps {
     }
 }
 
-let itemWidth
+let itemWidth : number
 const SlideShow = (
     {
         initialIndex,
@@ -59,7 +59,7 @@ const SlideShow = (
 
 
     let scrollValue = new Animated.Value(0)
-    const scrollToIndex = (index, animation) => {
+    const scrollToIndex = (index: number, animation: boolean) => {
         recyclerList.current.scrollToIndex(index, animation)
     }
 
@@ -77,7 +77,7 @@ const SlideShow = (
     }
 
 
-    const setScrollValue = (value) => {
+    const setScrollValue = (value: number) => {
         //Normalize value from fake index to actual index
         value = value % items.length
         if (value < 0) value = 0

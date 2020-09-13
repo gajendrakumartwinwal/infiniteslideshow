@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
-import SlideShow from "./src/SlideShow";
+// import SlideShow from "./src/SlideShow";
+import SlideShow from "./dist/index";
 // import SlideShow from "react-native-slide-show-library";
 
 class App extends React.Component{
@@ -21,7 +22,7 @@ class App extends React.Component{
 
     render(): React.ReactNode {
         return (
-            <SlideShow duration={500} style={
+            <SlideShow duration={100} style={
                 {
                     height: 500,
                     width: Dimensions.get('screen').width

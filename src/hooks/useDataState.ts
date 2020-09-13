@@ -1,5 +1,6 @@
-import {Dispatch, SetStateAction, useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {BaseLayoutProvider, DataProvider, LayoutProvider} from "recyclerlistview";
+import {any} from "prop-types";
 
 
 /**
@@ -20,7 +21,7 @@ export default function useDataState(items: object[], multipler: number, {height
             return r1 !== r2;
         });
         let i = 0
-        let fakeItems = []
+        let fakeItems: any[] = []
         for (; i < multipler; i++) {
             fakeItems = [...fakeItems, ...items]
         }

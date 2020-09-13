@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Dimensions, ScrollView } from 'react-native';
+import {ScrollView} from 'react-native';
 import { BaseScrollView } from 'recyclerlistview';
 
 
