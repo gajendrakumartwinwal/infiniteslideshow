@@ -33,6 +33,10 @@
     "react-test-renderer": "16.13.1",
     "recyclerlistview": "^3.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gajendrakumartwinwal/infiniteslideshow.git"
+  },
   "jest": {
     "preset": "react-native"
   }
