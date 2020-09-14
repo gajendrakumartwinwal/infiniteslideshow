@@ -1,5 +1,5 @@
 
-# react-native-slide-show-library
+# react-native-infiniteslideshow
 
 ## Getting started
 
@@ -46,7 +46,7 @@ Expo Example: https://snack.expo.io/@gajendrakumar/slideshowexample
 import React from 'react';
 import {StyleSheet, Text, View, Dimensions, Platform} from 'react-native';
 import SlideShow from "./components/SlideShow";
-// import SlideShow from "react-native-slide-show-library";
+// import SlideShow from "react-native-infiniteslideshow";
 
 export default function App() {
 
