@@ -3,11 +3,11 @@
 
 ## Getting started
 
-`$ npm install react-native-infinite-slideshow --save`
+`$ npm install react-native-infiniteslideshow --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-infinite-slideshow`
+`$ react-native link react-native-infiniteslideshow`
 
 
 

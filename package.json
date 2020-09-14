@@ -1,6 +1,6 @@
 {
-  "name": "react-native-infinite-slideshow",
-  "version": "1.0.2",
+  "name": "react-native-infiniteslideshow",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "android": "react-native run-android",
