@@ -40,22 +40,23 @@ const SlideShow = (
         autoScroll
     }: SlidShowProps
 ) => {
+    const multiplierValidated = items.length === 1 ? 0 : multiplier
     const recyclerList = useRef(null)
-    const intialialScrollIndex = (multiplier / 2) * items.length + initialIndex
+    const intialialScrollIndex = (multiplierValidated / 2) * items.length + initialIndex
     const [currentIndexFake, setCurrentIndexFake] = useState<number>(intialialScrollIndex)
     const [isPlaying, setIsPlaying] = usePlayState(autoScroll)
-    const [_dataSource, _layoutProvider] = useDataState(items, multiplier, style)
+    const [_dataSource, _layoutProvider] = useDataState(items, multiplierValidated, style)
 
 
     useEffect(() => {
-        if (autoScroll && isPlaying && multiplier > 0) {
+        if (autoScroll && isPlaying && multiplierValidated > 0) {
             const timerId = setTimeout(() => {
-                const updatedFakeIndex = (currentIndexFake + 1) % (multiplier * items.length + 1)
+                const updatedFakeIndex = (currentIndexFake + 1) % (multiplierValidated * items.length + 1)
                 recyclerList.current.scrollToIndex(updatedFakeIndex, true)
-            }, 3000)
+            }, duration)
             return () => clearTimeout(timerId)
         }
-    }, [currentIndexFake, isPlaying, autoScroll, multiplier])
+    }, [currentIndexFake, isPlaying, autoScroll, multiplierValidated])
 
 
     let scrollValue = new Animated.Value(0)
@@ -65,8 +66,8 @@ const SlideShow = (
 
     const onVisibleIndicesChanged = (item) => {
         if (item.length === 1) {
-            if (item[0] === 0 || item[0] === multiplier * items.length) {
-                const centerIndex = (multiplier / 2) * items.length
+            if (item[0] === 0 || item[0] === multiplierValidated * items.length) {
+                const centerIndex = (multiplierValidated / 2) * items.length
                 scrollToIndex(centerIndex, false)
             } else {
                 // Its in case of else only because it will be called nextime if it is going into above if condition reason for that is scrollToIndex
