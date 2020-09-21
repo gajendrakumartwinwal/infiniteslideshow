@@ -6,6 +6,7 @@ import CustomBaseScrollView from './CustomBaseScrollView';
 import DefaultViewPageIndicator from './DefaultViewPageIndicator';
 import useDataState from "./hooks/useDataState";
 import usePlayState from "./hooks/usePlayState";
+import {RecyclerListViewProps} from "recyclerlistview/dist/reactnative/core/RecyclerListView";
 
 interface SlidShowProps {
     initialIndex: number,
@@ -18,6 +19,7 @@ interface SlidShowProps {
         width: number,
         height: number,
     },
+    recyclerViewProps?: RecyclerListViewProps,
     indicatorStyle: {
         alignItems: FlexAlignType,
         position?: 'absolute' | 'relative';
@@ -37,7 +39,8 @@ const SlideShow = (
         multiplier,
         style,
         indicatorStyle,
-        autoScroll
+        autoScroll,
+        recyclerViewProps
     }: SlidShowProps
 ) => {
     const multiplierValidated = items.length === 1 ? 0 : multiplier
@@ -65,6 +68,8 @@ const SlideShow = (
     }
 
     const onVisibleIndicesChanged = (item) => {
+        const {onVisibleIndicesChanged = undefined} = recyclerViewProps || {}
+        if(onVisibleIndicesChanged && onVisibleIndicesChanged(item)) return
         if (item.length === 1) {
             if (item[0] === 0 || item[0] === multiplierValidated * items.length) {
                 const centerIndex = (multiplierValidated / 2) * items.length
@@ -94,6 +99,8 @@ const SlideShow = (
     }
 
     const onScrollAnimationEnd = () => {
+        const {onScrollEndDrag} = recyclerViewProps || {}
+        onScrollEndDrag && onScrollEndDrag()
         setIsPlaying(true)
     }
 
@@ -104,6 +111,7 @@ const SlideShow = (
     return (
         <View style={style}>
             {_layoutProvider && _dataSource && <RecyclerListView
+                {...recyclerViewProps}
                 initialRenderIndex={intialialScrollIndex}
                 onLayout={onItemLayout}
                 onScroll={onSCroll}

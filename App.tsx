@@ -41,6 +41,7 @@ class App extends React.Component{
                         width: Dimensions.get('screen').width
                     }}
                     multiplier={2}
+                    recyclerViewProps={{onVisibleIndicesChanged: (item) =>  { item.length === 1 && alert(item)}}}
                     items={this.state.items}
                     rowRenderer={this.rowRenderer}/>
                     <Button title={'Clicke me'} onPress={this.onPress}/>
