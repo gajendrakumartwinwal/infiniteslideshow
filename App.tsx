@@ -21,12 +21,15 @@ class App extends React.Component{
 
     render(): React.ReactNode {
         return (
-            <SlideShow duration={100} style={
-                {
+            <SlideShow
+                autoScroll={false}
+                duration={100}
+                style={{
                     height: 500,
                     width: Dimensions.get('screen').width
-                }
-            } items={[1, 2, 3, 4]} rowRenderer={this.rowRenderer}/>
+                }}
+                items={[1, 2, 3, 4]}
+                rowRenderer={this.rowRenderer}/>
         );
     }
 }

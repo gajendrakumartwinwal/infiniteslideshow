@@ -48,14 +48,14 @@ const SlideShow = (
 
 
     useEffect(() => {
-        if (autoScroll && isPlaying) {
+        if (autoScroll && isPlaying && multiplier > 0) {
             const timerId = setTimeout(() => {
                 const updatedFakeIndex = (currentIndexFake + 1) % (multiplier * items.length + 1)
                 recyclerList.current.scrollToIndex(updatedFakeIndex, true)
             }, 3000)
             return () => clearTimeout(timerId)
         }
-    }, [currentIndexFake, isPlaying, autoScroll])
+    }, [currentIndexFake, isPlaying, autoScroll, multiplier])
 
 
     let scrollValue = new Animated.Value(0)
@@ -126,7 +126,7 @@ const SlideShow = (
 SlideShow.defaultProps = {
     initialIndex: 0,
     duration: 3000,
-    multiplier: 2,
+    multiplier: 0,
     autoScroll: true,
     style: {
         width: Dimensions.get('screen').width,

@@ -20,12 +20,12 @@ export default function useDataState(items: object[], multipler: number, {height
         let dataProvider = new DataProvider((r1, r2) => {
             return r1 !== r2;
         });
-        let i = 0
-        let fakeItems: any[] = []
+        let i = 1
+        let fakeItems: any[] = [...items]
         for (; i < multipler; i++) {
-            fakeItems = [...fakeItems, ...items]
+            fakeItems = i === multipler-1 ? [...fakeItems, ...items, items[0]] : [...fakeItems, ...items]
         }
-        set_dataSource(dataProvider.cloneWithRows([...fakeItems, items[0]]));
+        set_dataSource(dataProvider.cloneWithRows(fakeItems));
         set_layoutProvider(new LayoutProvider(
             (index) => {
                 return 'FULL';
