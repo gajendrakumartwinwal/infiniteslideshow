@@ -15,11 +15,11 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* InfiniteScrollSlideShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InfiniteScrollSlideShowTests.m */; };
-		6B2E7331E0691BF1A825DF85 /* libPods-InfiniteScrollSlideShow-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1B38CC7BC02931170217CE /* libPods-InfiniteScrollSlideShow-tvOSTests.a */; };
+		45A22836D55DC46A68578AA8 /* libPods-InfiniteScrollSlideShow-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1245D2C7B61637BD30C3F04E /* libPods-InfiniteScrollSlideShow-tvOS.a */; };
+		77D9E6CD4D7FF28C1EE887CD /* libPods-InfiniteScrollSlideShow-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B63A5C8349B41391641B11F /* libPods-InfiniteScrollSlideShow-tvOSTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DE525F0B1F809B9F0C7AF065 /* libPods-InfiniteScrollSlideShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E854AB97340BE02C7911F7AE /* libPods-InfiniteScrollSlideShow.a */; };
-		EE6F4CD898E433C1828E5117 /* libPods-InfiniteScrollSlideShow-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FDE051DE102804136FD847 /* libPods-InfiniteScrollSlideShow-tvOS.a */; };
-		F43D8EC74963F766FC275901 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BEF787F111F9EC01FB634C /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */; };
+		A4947B8AC516903657840B66 /* libPods-InfiniteScrollSlideShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13768B3300498711002C1B6C /* libPods-InfiniteScrollSlideShow.a */; };
+		D2E88E728DD0C0CA051EE775 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C56EDA7A7F301963CCAD4C17 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,29 +44,29 @@
 		00E356EE1AD99517003FC87E /* InfiniteScrollSlideShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollSlideShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* InfiniteScrollSlideShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollSlideShowTests.m; sourceTree = "<group>"; };
+		06638FDAA1146EC21EA6A4D1 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		07084617E7C2EDC16567606F /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOSTests/Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ADD0436869DFC0569C6BD64 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOS/Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1245D2C7B61637BD30C3F04E /* libPods-InfiniteScrollSlideShow-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13768B3300498711002C1B6C /* libPods-InfiniteScrollSlideShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* InfiniteScrollSlideShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrollSlideShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = InfiniteScrollSlideShow/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InfiniteScrollSlideShow/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = InfiniteScrollSlideShow/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = InfiniteScrollSlideShow/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = InfiniteScrollSlideShow/main.m; sourceTree = "<group>"; };
-		2A1B38CC7BC02931170217CE /* libPods-InfiniteScrollSlideShow-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C16D8CC0FF5C3F286AAF58 /* Pods-InfiniteScrollSlideShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow/Pods-InfiniteScrollSlideShow.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* InfiniteScrollSlideShow-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InfiniteScrollSlideShow-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* InfiniteScrollSlideShow-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InfiniteScrollSlideShow-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		586797BE2DAD588E837D663A /* Pods-InfiniteScrollSlideShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow/Pods-InfiniteScrollSlideShow.debug.xcconfig"; sourceTree = "<group>"; };
-		5BF3AA91BEC1B7DFC2C47838 /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOS/Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		6D575C53103866EC717F5D74 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOS/Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4B63A5C8349B41391641B11F /* libPods-InfiniteScrollSlideShow-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54BB5DD771798884FE831EDB /* Pods-InfiniteScrollSlideShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow/Pods-InfiniteScrollSlideShow.debug.xcconfig"; sourceTree = "<group>"; };
+		54EECF026B79BB1A95DD0EE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOSTests/Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = InfiniteScrollSlideShow/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		99CCEA44B63FB2A44EB4CDE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOSTests/Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BFCCBC65BB9DAFF34A9EC494 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig"; sourceTree = "<group>"; };
-		C91DBD107D2F2647570C05BF /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOSTests/Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		D157A04053CA2D6111AF4839 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D7BEF787F111F9EC01FB634C /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E854AB97340BE02C7911F7AE /* libPods-InfiniteScrollSlideShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9319F09900EE4C4386BE63B /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-tvOS/Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		C56EDA7A7F301963CCAD4C17 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9019ADE25A1DF35D8E38F0 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F532CC3531B26EA2C8B85849 /* Pods-InfiniteScrollSlideShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfiniteScrollSlideShow.release.xcconfig"; path = "Target Support Files/Pods-InfiniteScrollSlideShow/Pods-InfiniteScrollSlideShow.release.xcconfig"; sourceTree = "<group>"; };
-		F5FDE051DE102804136FD847 /* libPods-InfiniteScrollSlideShow-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InfiniteScrollSlideShow-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43D8EC74963F766FC275901 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a in Frameworks */,
+				D2E88E728DD0C0CA051EE775 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE525F0B1F809B9F0C7AF065 /* libPods-InfiniteScrollSlideShow.a in Frameworks */,
+				A4947B8AC516903657840B66 /* libPods-InfiniteScrollSlideShow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE6F4CD898E433C1828E5117 /* libPods-InfiniteScrollSlideShow-tvOS.a in Frameworks */,
+				45A22836D55DC46A68578AA8 /* libPods-InfiniteScrollSlideShow-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2E7331E0691BF1A825DF85 /* libPods-InfiniteScrollSlideShow-tvOSTests.a in Frameworks */,
+				77D9E6CD4D7FF28C1EE887CD /* libPods-InfiniteScrollSlideShow-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				E854AB97340BE02C7911F7AE /* libPods-InfiniteScrollSlideShow.a */,
-				D7BEF787F111F9EC01FB634C /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */,
-				F5FDE051DE102804136FD847 /* libPods-InfiniteScrollSlideShow-tvOS.a */,
-				2A1B38CC7BC02931170217CE /* libPods-InfiniteScrollSlideShow-tvOSTests.a */,
+				13768B3300498711002C1B6C /* libPods-InfiniteScrollSlideShow.a */,
+				C56EDA7A7F301963CCAD4C17 /* libPods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.a */,
+				1245D2C7B61637BD30C3F04E /* libPods-InfiniteScrollSlideShow-tvOS.a */,
+				4B63A5C8349B41391641B11F /* libPods-InfiniteScrollSlideShow-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,14 +152,14 @@
 		3050C0BB6EE324BB625605B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				586797BE2DAD588E837D663A /* Pods-InfiniteScrollSlideShow.debug.xcconfig */,
-				F532CC3531B26EA2C8B85849 /* Pods-InfiniteScrollSlideShow.release.xcconfig */,
-				D157A04053CA2D6111AF4839 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */,
-				BFCCBC65BB9DAFF34A9EC494 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */,
-				6D575C53103866EC717F5D74 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */,
-				5BF3AA91BEC1B7DFC2C47838 /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */,
-				99CCEA44B63FB2A44EB4CDE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */,
-				C91DBD107D2F2647570C05BF /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */,
+				54BB5DD771798884FE831EDB /* Pods-InfiniteScrollSlideShow.debug.xcconfig */,
+				19C16D8CC0FF5C3F286AAF58 /* Pods-InfiniteScrollSlideShow.release.xcconfig */,
+				06638FDAA1146EC21EA6A4D1 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */,
+				CD9019ADE25A1DF35D8E38F0 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */,
+				0ADD0436869DFC0569C6BD64 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */,
+				A9319F09900EE4C4386BE63B /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */,
+				07084617E7C2EDC16567606F /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */,
+				54EECF026B79BB1A95DD0EE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -204,11 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "InfiniteScrollSlideShowTests" */;
 			buildPhases = (
-				331FCA8A735E9146467AAA20 /* [CP] Check Pods Manifest.lock */,
+				8FDB5DADC046027C937167CD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C760CEDF2545323DDCF85CA8 /* [CP] Copy Pods Resources */,
+				B235D12AC6CE3F675478E01D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,13 +224,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "InfiniteScrollSlideShow" */;
 			buildPhases = (
-				95EF1CFE94C36254AF3A1A5D /* [CP] Check Pods Manifest.lock */,
+				D7F51B5DE07AD6F47ECA97F2 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				27EE257CC714DFECF544FD54 /* [CP] Copy Pods Resources */,
+				0C927715262726C316E75CD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "InfiniteScrollSlideShow-tvOS" */;
 			buildPhases = (
-				F56835D6A6DC3943043BF855 /* [CP] Check Pods Manifest.lock */,
+				D8C8EDA83EBBBFD31C9B2498 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -265,7 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "InfiniteScrollSlideShow-tvOSTests" */;
 			buildPhases = (
-				A0215B524EB128A2417B4858 /* [CP] Check Pods Manifest.lock */,
+				50C9AAC1C22BFB9C1D39099E /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -376,7 +376,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		27EE257CC714DFECF544FD54 /* [CP] Copy Pods Resources */ = {
+		0C927715262726C316E75CD0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,51 +408,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		331FCA8A735E9146467AAA20 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95EF1CFE94C36254AF3A1A5D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-InfiniteScrollSlideShow-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0215B524EB128A2417B4858 /* [CP] Check Pods Manifest.lock */ = {
+		50C9AAC1C22BFB9C1D39099E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,7 +430,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C760CEDF2545323DDCF85CA8 /* [CP] Copy Pods Resources */ = {
+		8FDB5DADC046027C937167CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B235D12AC6CE3F675478E01D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,7 +470,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests/Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F56835D6A6DC3943043BF855 /* [CP] Check Pods Manifest.lock */ = {
+		D7F51B5DE07AD6F47ECA97F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InfiniteScrollSlideShow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C8EDA83EBBBFD31C9B2498 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -607,7 +607,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D157A04053CA2D6111AF4839 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */;
+			baseConfigurationReference = 06638FDAA1146EC21EA6A4D1 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -630,7 +630,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCCBC65BB9DAFF34A9EC494 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */;
+			baseConfigurationReference = CD9019ADE25A1DF35D8E38F0 /* Pods-InfiniteScrollSlideShow-InfiniteScrollSlideShowTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -650,7 +650,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 586797BE2DAD588E837D663A /* Pods-InfiniteScrollSlideShow.debug.xcconfig */;
+			baseConfigurationReference = 54BB5DD771798884FE831EDB /* Pods-InfiniteScrollSlideShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -673,7 +673,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F532CC3531B26EA2C8B85849 /* Pods-InfiniteScrollSlideShow.release.xcconfig */;
+			baseConfigurationReference = 19C16D8CC0FF5C3F286AAF58 /* Pods-InfiniteScrollSlideShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -694,7 +694,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D575C53103866EC717F5D74 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 0ADD0436869DFC0569C6BD64 /* Pods-InfiniteScrollSlideShow-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -722,7 +722,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BF3AA91BEC1B7DFC2C47838 /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */;
+			baseConfigurationReference = A9319F09900EE4C4386BE63B /* Pods-InfiniteScrollSlideShow-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -750,7 +750,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CCEA44B63FB2A44EB4CDE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 07084617E7C2EDC16567606F /* Pods-InfiniteScrollSlideShow-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -777,7 +777,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C91DBD107D2F2647570C05BF /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 54EECF026B79BB1A95DD0EE0 /* Pods-InfiniteScrollSlideShow-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

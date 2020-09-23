@@ -1,5 +1,6 @@
 /// <reference types="react" />
 import { FlexAlignType } from 'react-native';
+import { RecyclerListViewProps } from "recyclerlistview/dist/reactnative/core/RecyclerListView";
 interface SlidShowProps {
     initialIndex: number;
     duration: number;
@@ -11,6 +12,7 @@ interface SlidShowProps {
         width: number;
         height: number;
     };
+    recyclerViewProps?: RecyclerListViewProps;
     indicatorStyle: {
         alignItems: FlexAlignType;
         position?: 'absolute' | 'relative';
@@ -20,7 +22,7 @@ interface SlidShowProps {
     };
 }
 declare const SlideShow: {
-    ({ initialIndex, duration, items, rowRenderer, multiplier, style, indicatorStyle, autoScroll }: SlidShowProps): JSX.Element;
+    ({ initialIndex, duration, items, rowRenderer, multiplier, style, indicatorStyle, autoScroll, recyclerViewProps }: SlidShowProps): JSX.Element;
     defaultProps: {
         initialIndex: number;
         duration: number;

@@ -1,18 +1,20 @@
 import * as React from 'react';
 import {useEffect, useRef, useState} from 'react';
-import {Animated, Dimensions, FlexAlignType, View} from 'react-native';
+import {Animated, Dimensions, FlexAlignType, Platform, View} from 'react-native';
 import {RecyclerListView,} from 'recyclerlistview';
 import CustomBaseScrollView from './CustomBaseScrollView';
 import DefaultViewPageIndicator from './DefaultViewPageIndicator';
 import useDataState from "./hooks/useDataState";
 import usePlayState from "./hooks/usePlayState";
 import {RecyclerListViewProps} from "recyclerlistview/dist/reactnative/core/RecyclerListView";
+import _scrollDirection from "./Utils";
 
 interface SlidShowProps {
     initialIndex: number,
     duration: number,
     multiplier: number,
-    autoScroll: boolean,
+    autoScroll?: boolean,
+    disableIndicator?: boolean,
     items: any[],
     rowRenderer: (type: string | number, data: any, index: number) => null;
     style: {
@@ -29,7 +31,7 @@ interface SlidShowProps {
     }
 }
 
-let itemWidth : number
+let itemWidth: number
 const SlideShow = (
     {
         initialIndex,
@@ -40,6 +42,7 @@ const SlideShow = (
         style,
         indicatorStyle,
         autoScroll,
+        disableIndicator,
         recyclerViewProps
     }: SlidShowProps
 ) => {
@@ -47,9 +50,10 @@ const SlideShow = (
     const recyclerList = useRef(null)
     const intialialScrollIndex = (multiplierValidated / 2) * items.length + initialIndex
     const [currentIndexFake, setCurrentIndexFake] = useState<number>(intialialScrollIndex)
+    const [oldOffset, setOldOffset] = useState<number>(Number.NEGATIVE_INFINITY)
+    const [selectedIndexAndroid, setSelectedIndexAndroid] = useState<number>(intialialScrollIndex)
     const [isPlaying, setIsPlaying] = usePlayState(autoScroll)
     const [_dataSource, _layoutProvider] = useDataState(items, multiplierValidated, style)
-
 
     useEffect(() => {
         if (autoScroll && isPlaying && multiplierValidated > 0) {
@@ -67,19 +71,23 @@ const SlideShow = (
         recyclerList.current.scrollToIndex(index, animation)
     }
 
-    const onVisibleIndicesChanged = (item) => {
-        const {onVisibleIndicesChanged = undefined} = recyclerViewProps || {}
-        if(onVisibleIndicesChanged && onVisibleIndicesChanged(item)) return
-        if (item.length === 1) {
-            if (item[0] === 0 || item[0] === multiplierValidated * items.length) {
-                const centerIndex = (multiplierValidated / 2) * items.length
-                scrollToIndex(centerIndex, false)
-            } else {
-                // Its in case of else only because it will be called nextime if it is going into above if condition reason for that is scrollToIndex
-                // currentIndexFake = item[0]
-                setCurrentIndexFake(item[0])
-            }
+    const onPageSelected = (position) => {
+        if (position === 0 || position === multiplierValidated * items.length) {
+            const centerIndex = (multiplierValidated / 2) * items.length
+
+            console.log('Scroll reseting................... ')
+            scrollToIndex(centerIndex, false)
+        } else {
+            // Its in case of else only because it will be called nextime if it is going into above if condition reason for that is scrollToIndex
+            // currentIndexFake = item[0]
+            setCurrentIndexFake(position)
+            const {onVisibleIndicesChanged = undefined} = recyclerViewProps || {}
+            onVisibleIndicesChanged && onVisibleIndicesChanged(position % items.length)
         }
+    }
+
+    const onVisibleIndicesChange = (item, p1, p2) => {
+        if (Platform.OS === 'ios' && item.length === 1) onPageSelected(item[0])
     }
 
 
@@ -92,6 +100,22 @@ const SlideShow = (
         scrollValue.setValue(value)
     }
     const onSCroll = ({nativeEvent: {contentOffset: {x}}}) => {
+        if(oldOffset === Number.NEGATIVE_INFINITY) {
+            setOldOffset(x)
+            return
+        }
+        //GEt direction
+        const direction = _scrollDirection(x, oldOffset)
+        const count = (x/itemWidth).toFixed(4)
+        //Get Number
+        const currentValue = direction < 0 ? Math.ceil(count) : Math.floor(count)
+
+        if (selectedIndexAndroid !== currentValue) {
+            setSelectedIndexAndroid(currentValue)
+            setOldOffset(x)
+            console.log('Gajendra ---> '+currentValue)
+            Platform.OS === 'android' && onPageSelected(currentValue)
+        }
         setScrollValue(x / itemWidth)
     };
     const onItemLayout = ({nativeEvent: {layout: {width}}}) => {
@@ -123,11 +147,13 @@ const SlideShow = (
                 dataProvider={_dataSource}
                 layoutProvider={_layoutProvider}
                 rowRenderer={rowRenderer}
-                onVisibleIndicesChanged={onVisibleIndicesChanged}
+                onVisibleIndicesChanged={onVisibleIndicesChange}
             />}
-            <View style={indicatorStyle}>
-                <DefaultViewPageIndicator activePage={0} pageCount={items.length} scrollOffset={0} scrollValue={scrollValue}/>
+            {!disableIndicator && <View style={indicatorStyle}>
+                <DefaultViewPageIndicator activePage={0} pageCount={items.length} scrollOffset={0}
+                                          scrollValue={scrollValue}/>
             </View>
+            }
         </View>
     );
 }
@@ -137,6 +163,7 @@ SlideShow.defaultProps = {
     duration: 3000,
     multiplier: 0,
     autoScroll: true,
+    disableIndicator: false,
     style: {
         width: Dimensions.get('screen').width,
         height: Dimensions.get('screen').height,

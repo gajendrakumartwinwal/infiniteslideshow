@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, Text, View, Dimensions, Button} from 'react-native';
-import SlideShow from "./src/SlideShow";
-// import SlideShow from "./dist/index";
+// import SlideShow from "./src/SlideShow";
+import SlideShow from "./dist/index";
 
 class App extends React.Component{
 
@@ -24,6 +24,7 @@ class App extends React.Component{
     }
 
     render(): React.ReactNode {
+        // alert('yes i am here!')
         return (
             <View>
                 <SlideShow
@@ -34,14 +35,13 @@ class App extends React.Component{
                         left: 0,
                         right: 0,
                     }}
-                    autoScroll={true}
+                    autoScroll={false}
                     duration={3000}
                     style={{
                         height: 500,
                         width: Dimensions.get('screen').width
                     }}
                     multiplier={2}
-                    recyclerViewProps={{onVisibleIndicesChanged: (item) =>  { item.length === 1 && alert(item)}}}
                     items={this.state.items}
                     rowRenderer={this.rowRenderer}/>
                     <Button title={'Clicke me'} onPress={this.onPress}/>
