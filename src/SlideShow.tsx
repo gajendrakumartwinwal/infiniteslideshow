@@ -97,7 +97,7 @@ const SlideShow = (
 
         //Normalize value from fake index to actual index
         console.log('LENGTH ---> '+items.length)
-        let value = scroll.toFixed(4) % items.length
+        let value = Number(scroll.toFixed(4)) % items.length
         console.log('SCROLL_ORIGINAL ---> '+value, scroll, items.length)
 
         if (value < 0) value = 0
@@ -106,21 +106,24 @@ const SlideShow = (
         scrollValue.current.setValue(value)
     }
     const onSCroll = ({nativeEvent: {contentOffset: {x}}}) => {
-        if(oldOffset === Number.NEGATIVE_INFINITY) {
-            setOldOffset(x)
-            return
-        }
-        //GEt direction
-        const direction = _scrollDirection(x, oldOffset)
-        const count = (x/itemWidth).toFixed(4)
-        //Get Number
-        const currentValue = direction < 0 ? Math.ceil(count) : Math.floor(count)
+        //There is some issue in onVisibleIndicesChange its not working for android so same thing handled mannually by detecting selected index and others
+        if (Platform.OS === 'android') {
+            if (oldOffset === Number.NEGATIVE_INFINITY) {
+                setOldOffset(x)
+                return
+            }
+            //GEt direction
+            const direction = _scrollDirection(x, oldOffset)
+            const count = (x / itemWidth).toFixed(4)
+            //Get Number
+            const currentValue = direction < 0 ? Math.ceil(count) : Math.floor(count)
 
-        if (selectedIndexAndroid !== currentValue) {
-            setSelectedIndexAndroid(currentValue)
-            setOldOffset(x)
-            console.log('Gajendra ---> '+currentValue)
-            Platform.OS === 'android' && onPageSelected(currentValue)
+            if (selectedIndexAndroid !== currentValue) {
+                setSelectedIndexAndroid(currentValue)
+                setOldOffset(x)
+                console.log('Gajendra ---> ' + currentValue)
+                onPageSelected(currentValue)
+            }
         }
         setScrollValue(x / itemWidth)
     };

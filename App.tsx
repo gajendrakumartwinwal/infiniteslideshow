@@ -7,7 +7,7 @@ class App extends React.Component{
 
     constructor(props){
         super(props)
-        this.state = {items: [1,2,3]}
+        this.state = {items: [1,2,3,4,5,6]}
     }
     rowRenderer = (type: number, data: any) => {
         return (
@@ -35,7 +35,7 @@ class App extends React.Component{
                         left: 0,
                         right: 0,
                     }}
-                    autoScroll={false}
+                    autoScroll={true}
                     duration={3000}
                     style={{
                         height: 500,
