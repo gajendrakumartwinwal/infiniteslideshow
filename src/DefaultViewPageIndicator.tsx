@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 
 
-const DOT_SIZE = 16;
-const DOT_SAPCE = 14;
+const DOT_SIZE = 6;
+const DOT_SAPCE = 4;
 
 let styles = StyleSheet.create({
     tab: {
@@ -25,7 +25,7 @@ let styles = StyleSheet.create({
         width: DOT_SIZE,
         height: DOT_SIZE,
         borderRadius: DOT_SIZE / 2,
-        backgroundColor: '#f00',
+        backgroundColor: '#E0E1E2',
         marginLeft: DOT_SAPCE,
         marginRight: DOT_SAPCE,
     },
@@ -35,7 +35,7 @@ let styles = StyleSheet.create({
         width: DOT_SIZE,
         height: DOT_SIZE,
         borderRadius: DOT_SIZE / 2,
-        backgroundColor: '#0f0',
+        backgroundColor: '#80ACD0',
         marginHorizontal: DOT_SAPCE,
         bottom: 0,
     },
