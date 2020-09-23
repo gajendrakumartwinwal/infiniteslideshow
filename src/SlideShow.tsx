@@ -54,6 +54,7 @@ const SlideShow = (
     const [selectedIndexAndroid, setSelectedIndexAndroid] = useState<number>(intialialScrollIndex)
     const [isPlaying, setIsPlaying] = usePlayState(autoScroll)
     const [_dataSource, _layoutProvider] = useDataState(items, multiplierValidated, style)
+    const scrollValue = useRef(new Animated.Value(0));
 
     useEffect(() => {
         if (autoScroll && isPlaying && multiplierValidated > 0) {
@@ -66,7 +67,7 @@ const SlideShow = (
     }, [currentIndexFake, isPlaying, autoScroll, multiplierValidated])
 
 
-    let scrollValue = new Animated.Value(0)
+    // let scrollValue = new Animated.Value(0)
     const scrollToIndex = (index: number, animation: boolean) => {
         recyclerList.current.scrollToIndex(index, animation)
     }
@@ -91,13 +92,18 @@ const SlideShow = (
     }
 
 
-    const setScrollValue = (value: number) => {
+    const setScrollValue = (scroll: number) => {
+
+
         //Normalize value from fake index to actual index
-        value = value % items.length
+        console.log('LENGTH ---> '+items.length)
+        let value = scroll.toFixed(4) % items.length
+        console.log('SCROLL_ORIGINAL ---> '+value, scroll, items.length)
+
         if (value < 0) value = 0
         //Don't animate if you are at actual index 0 in left size and last index in right side
         if (value > items.length - 1) value = currentIndexFake % items.length === 0 ? 0 : items.length - 1
-        scrollValue.setValue(value)
+        scrollValue.current.setValue(value)
     }
     const onSCroll = ({nativeEvent: {contentOffset: {x}}}) => {
         if(oldOffset === Number.NEGATIVE_INFINITY) {
@@ -151,7 +157,7 @@ const SlideShow = (
             />}
             {!disableIndicator && <View style={indicatorStyle}>
                 <DefaultViewPageIndicator activePage={0} pageCount={items.length} scrollOffset={0}
-                                          scrollValue={scrollValue}/>
+                                          scrollValue={scrollValue.current}/>
             </View>
             }
         </View>

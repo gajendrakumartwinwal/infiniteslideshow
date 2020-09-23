@@ -7,7 +7,7 @@ class App extends React.Component{
 
     constructor(props){
         super(props)
-        this.state = {items: [1,2,3,4,5]}
+        this.state = {items: [1,2,3]}
     }
     rowRenderer = (type: number, data: any) => {
         return (
@@ -41,7 +41,7 @@ class App extends React.Component{
                         height: 500,
                         width: Dimensions.get('screen').width
                     }}
-                    multiplier={2}
+                    multiplier={4}
                     items={this.state.items}
                     rowRenderer={this.rowRenderer}/>
                     <Button title={'Clicke me'} onPress={this.onPress}/>
