@@ -49,6 +49,7 @@ const SlideShow = (
     const multiplierValidated = items.length === 1 ? 0 : multiplier
     const recyclerList = useRef(null)
     const intialialScrollIndex = (multiplierValidated / 2) * items.length + initialIndex
+    console.log('RESET CENTER INDEX -----=>', intialialScrollIndex)
     const [currentIndexFake, setCurrentIndexFake] = useState<number>(intialialScrollIndex)
     const [oldOffset, setOldOffset] = useState<number>(Number.NEGATIVE_INFINITY)
     const [selectedIndexAndroid, setSelectedIndexAndroid] = useState<number>(intialialScrollIndex)
@@ -65,6 +66,10 @@ const SlideShow = (
             return () => clearTimeout(timerId)
         }
     }, [currentIndexFake, isPlaying, autoScroll, multiplierValidated])
+    useEffect(() => {
+        setIsPlaying(autoScroll)
+    }, [autoScroll])
+
 
 
     // let scrollValue = new Animated.Value(0)
@@ -75,8 +80,6 @@ const SlideShow = (
     const onPageSelected = (position) => {
         if (position === 0 || position === multiplierValidated * items.length) {
             const centerIndex = (multiplierValidated / 2) * items.length
-
-            console.log('Scroll reseting................... ')
             scrollToIndex(centerIndex, false)
         } else {
             // Its in case of else only because it will be called nextime if it is going into above if condition reason for that is scrollToIndex
@@ -96,13 +99,13 @@ const SlideShow = (
 
 
         //Normalize value from fake index to actual index
-        console.log('LENGTH ---> '+items.length)
         let value = Number(scroll.toFixed(4)) % items.length
-        console.log('SCROLL_ORIGINAL ---> '+value, scroll, items.length)
 
         if (value < 0) value = 0
+
         //Don't animate if you are at actual index 0 in left size and last index in right side
         if (value > items.length - 1) value = currentIndexFake % items.length === 0 ? 0 : items.length - 1
+
         scrollValue.current.setValue(value)
     }
     const onSCroll = ({nativeEvent: {contentOffset: {x}}}) => {
@@ -121,7 +124,6 @@ const SlideShow = (
             if (selectedIndexAndroid !== currentValue) {
                 setSelectedIndexAndroid(currentValue)
                 setOldOffset(x)
-                console.log('Gajendra ---> ' + currentValue)
                 onPageSelected(currentValue)
             }
         }
