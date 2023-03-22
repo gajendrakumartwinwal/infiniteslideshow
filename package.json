@@ -1,6 +1,6 @@
 {
   "name": "react-native-infiniteslideshow",
-  "version": "3.0.2",
+  "version": "3.0.2-beta-dot",
   "private": false,
   "scripts": {
     "android": "react-native run-android",
