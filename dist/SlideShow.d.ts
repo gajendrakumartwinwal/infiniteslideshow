@@ -31,6 +31,7 @@ interface SlidShowProps {
     borderColor?: string;
     backgroundColor?: string;
   };
+  renderDots?: React.FC;
 }
 declare const SlideShow: {
   ({

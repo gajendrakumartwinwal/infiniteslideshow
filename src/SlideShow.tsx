@@ -43,6 +43,7 @@ interface SlidShowProps {
     borderColor?: string;
     backgroundColor?: string;
   };
+  renderDots?: React.FC;
 }
 
 let itemWidth: number;
@@ -59,17 +60,20 @@ const SlideShow = ({
   recyclerViewProps,
   dotStyle,
   activeDotStyle,
+  renderDots,
 }: SlidShowProps) => {
   const multiplierValidated = items.length === 1 ? 0 : multiplier;
   const recyclerList = useRef(null);
   const intialialScrollIndex =
     (multiplierValidated / 2) * items.length + initialIndex;
   console.log('RESET CENTER INDEX -----=>', intialialScrollIndex);
-  const [currentIndexFake, setCurrentIndexFake] =
-    useState<number>(intialialScrollIndex);
+  const [currentIndexFake, setCurrentIndexFake] = useState<number>(
+    intialialScrollIndex,
+  );
   const [oldOffset, setOldOffset] = useState<number>(Number.NEGATIVE_INFINITY);
-  const [selectedIndexAndroid, setSelectedIndexAndroid] =
-    useState<number>(intialialScrollIndex);
+  const [selectedIndexAndroid, setSelectedIndexAndroid] = useState<number>(
+    intialialScrollIndex,
+  );
   const [isPlaying, setIsPlaying] = usePlayState(autoScroll);
   const [_dataSource, _layoutProvider] = useDataState(
     items,
@@ -189,18 +193,19 @@ const SlideShow = ({
           onVisibleIndicesChanged={onVisibleIndicesChange}
         />
       )}
-      {!disableIndicator && (
-        <View style={indicatorStyle}>
-          <DefaultViewPageIndicator
-            activePage={0}
-            pageCount={items.length}
-            dotStyle={dotStyle}
-            activeDotStyle={activeDotStyle}
-            scrollOffset={0}
-            scrollValue={scrollValue.current}
-          />
-        </View>
-      )}
+      {!disableIndicator &&
+        (renderDots || (
+          <View style={indicatorStyle}>
+            <DefaultViewPageIndicator
+              activePage={0}
+              pageCount={items.length}
+              dotStyle={dotStyle}
+              activeDotStyle={activeDotStyle}
+              scrollOffset={0}
+              scrollValue={scrollValue.current}
+            />
+          </View>
+        ))}
     </View>
   );
 };
